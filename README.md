@@ -1,0 +1,1 @@
+# intersystems-objectscript-template

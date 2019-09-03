@@ -5,7 +5,7 @@
         "type": "objectscript",
         "request": "launch",
         "name": "ObjectScript Debug Class", 
-        "program": "##class(Sample.Person).Test()",
+        "program": "##class(PackageSample.ObjectScript).Test()",
       },
       {
         "type": "objectscript",

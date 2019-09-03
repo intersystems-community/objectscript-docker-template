@@ -1,7 +1,7 @@
 {
     "objectscript.conn.active": true,
     "objectscript.conn.version": 3,
-    "objectscript.conn.ns": "DNA",
-    "objectscript.conn.port": 57773,
+    "objectscript.conn.ns": "USER",
+    "objectscript.conn.port": 52773, 
     "objectscript.export.addCategory": true
 }

@@ -23,7 +23,7 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
             " If 'sc do \$zu(4, \$JOB, 1)\n" \
             " zn \"%sys\"" \
             " write \"Create web application ...\",!" \
-            " set webName = \"/csp/dna\"" \
+            " set webName = \"/csp/user\"" \
             " set webProperties(\"NameSpace\") = \"USER\"" \
             " set webProperties(\"Enabled\") = 1" \
             " set webProperties(\"IsNameSpaceDefault\") = 1" \

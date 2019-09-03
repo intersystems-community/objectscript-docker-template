@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [    
+      {
+        "type": "objectscript",
+        "request": "launch",
+        "name": "ObjectScript Debug Class", 
+        "program": "##class(Sample.Person).Test()",
+      },
+      {
+        "type": "objectscript",
+        "request": "attach",
+        "name": "ObjectScript Attach",
+        "processId": "${command:PickProcess}",
+        "system": true
+      }
+    ]
+  }

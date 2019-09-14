@@ -22,5 +22,5 @@ RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
     /bin/echo -e "sys\nsys\n" \
     | iris stop $ISC_PACKAGE_INSTANCENAME quietly
 
-USER irisowner
+USER ${ISC_PACKAGE_MGRUSER}
 CMD [ "-l", "/usr/irissys/mgr/messages.log" ]

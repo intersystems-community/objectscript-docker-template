@@ -10,7 +10,7 @@ This needs to have git and docker installed.
 Clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/diashenrique/iris-history-monitor.git
+$ git clone https://github.com/your-repository.git
 ```
 
 Open the terminal in this directory and run:

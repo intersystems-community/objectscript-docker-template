@@ -1,0 +1,38 @@
+ARG IMAGE=intersystems/iris:2019.1.0S.111.0
+ARG IMAGE=store/intersystems/iris:2019.1.0.511.0-community
+ARG IMAGE=store/intersystems/iris:2019.2.0.107.0-community
+#ARG IMAGE=intersystems/iris:2019.3.0.302.0
+FROM $IMAGE
+ARG IMAGE=store/intersystems/iris:2019.3.0.302.0-community
+
+USER root
+WORKDIR /opt/app
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/app
+
+COPY ./Installer.cls ./
+COPY ./src/cls ./src/cls
+#COPY ./src/dfi ./src/dfi
+
+RUN mkdir -p /tmp/deps \
+
+ && cd /tmp/deps \
+
+ && wget -q https://pm.community.intersystems.com/packages/zpm/latest/installer -O zpm.xml
+
+
+RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
+    /bin/echo -e "sys\nsys\n" \
+            " Do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
+            " Do \$system.OBJ.Load(\"/tmp/deps/zpm.xml\", \"ck\")" \
+            " zpm \"install webterminal\"" \
+            " Do \$system.OBJ.Load(\"/opt/app/Installer.cls\",\"ck\")\n" \
+            " Set sc = ##class(App.Installer).setup(, 3)\n" \
+            " If 'sc do \$zu(4, \$JOB, 1)\n" \
+            " halt" \
+    | iris session $ISC_PACKAGE_INSTANCENAME && \
+    /bin/echo -e "sys\nsys\n" \
+    | iris stop $ISC_PACKAGE_INSTANCENAME quietly
+
+USER irisowner
+
+CMD [ "-l", "/usr/irissys/mgr/messages.log" ]

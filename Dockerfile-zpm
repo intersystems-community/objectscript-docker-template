@@ -5,13 +5,13 @@ ARG IMAGE=store/intersystems/iris:2019.2.0.107.0-community
 FROM $IMAGE
 ARG IMAGE=store/intersystems/iris:2019.3.0.302.0-community
 
+USER root
 WORKDIR /opt/app
+RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/app
 
 COPY ./Installer.cls ./
 COPY ./src/cls ./src/cls
 #COPY ./src/dfi ./src/dfi
-
-USER root
 
 RUN mkdir -p /tmp/deps \
 

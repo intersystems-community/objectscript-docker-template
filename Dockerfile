@@ -17,8 +17,8 @@ COPY  ./src/cls ./src/cls
 #COPY --chown=irisowner ./src/dfi ./src/dfi
 
 
-RUN iris start $ISC_PACKAGE_INSTANCENAME quietly EmergencyId=sys,sys && \
-    /bin/echo -e "sys\nsys\n" \
+RUN iris start $ISC_PACKAGE_INSTANCENAME quietly && \
+    /bin/echo -e \
             " Do ##class(Security.Users).UnExpireUserPasswords(\"*\")\n" \
             " Do \$system.OBJ.Load(\"/opt/app/Installer.cls\",\"ck\")\n" \
             " Set sc = ##class(App.Installer).setup(, 3)\n" \

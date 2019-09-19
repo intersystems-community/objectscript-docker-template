@@ -9,6 +9,8 @@ USER root
 WORKDIR /opt/app
 RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/app
 
+USER irisowner
+
 COPY ./Installer.cls ./
 COPY ./src/cls ./src/cls
 #COPY ./src/dfi ./src/dfi

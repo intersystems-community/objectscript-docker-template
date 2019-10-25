@@ -9,7 +9,7 @@ XData setup
   <Namespace Name="IRISAPP" Code="IRISAPP" Data="IRISAPP" Create="yes" Ensemble="no">
 
     <Configuration>
-      <Database Name="MYAPP" Dir="/opt/irisapp/data" Create="yes"/>
+      <Database Name="IRISAPP" Dir="/opt/irisapp/data" Create="yes"/>
 
       <Import File="${SourceDir}" Flags="ck" Recurse="1"/>
     </Configuration>

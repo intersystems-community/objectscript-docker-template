@@ -25,7 +25,8 @@ SHELL ["/irissession.sh"]
 
 RUN \
   do $SYSTEM.OBJ.Load("Installer.cls", "ck") \
-  Do $system.OBJ.Load(\"/tmp/deps/zpm.xml", "ck") \
+  Do $system.OBJ.Load("/tmp/deps/zpm.xml", "ck") \
+  zpm "install webterminal" \
   set sc = ##class(App.Installer).setup() 
 
 

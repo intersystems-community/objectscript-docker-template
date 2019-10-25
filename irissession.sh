@@ -1,4 +1,3 @@
-  
 #!/bin/bash
 
 iris start $ISC_PACKAGE_INSTANCENAME quietly

@@ -9,9 +9,6 @@ services:
       - 51773
       - ${IRIS_PORT}:52773
       - 53773
-    environment: 
-      - ISC_DATA_DIRECTORY=/ISC/irisconf.d
     volumes:
       - ~/iris.key:/usr/irissys/mgr/iris.key
-      - ./ISC:/ISC
-      - ./:/iris/app
+      - ./:/irisdev/app

@@ -7,9 +7,9 @@ do ##class(%SYSTEM.Process).CurrentDirectory("$PWD")
 $@
 if '\$Get(sc) do ##class(%SYSTEM.Process).Terminate(, 1)
 zn "%SYS"
-Do ##class(Security.Users).UnExpireUserPasswords("*")
 do ##class(SYS.Container).QuiesceForBundling()
 do ##class(SYS.Container).SetMonitorStateOK("irisowner")
+Do ##class(Security.Users).UnExpireUserPasswords("*")
 halt
 EOF
 

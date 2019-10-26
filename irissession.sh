@@ -4,9 +4,10 @@ iris start $ISC_PACKAGE_INSTANCENAME quietly
  
 cat << EOF | iris session $ISC_PACKAGE_INSTANCENAME -U %SYS
 do ##class(%SYSTEM.Process).CurrentDirectory("$PWD")
-Do ##class(Security.Users).UnExpireUserPasswords("*")
 $@
 if '\$Get(sc) do ##class(%SYSTEM.Process).Terminate(, 1)
+zn "%SYS"
+Do ##class(Security.Users).UnExpireUserPasswords("*")
 do ##class(SYS.Container).QuiesceForBundling()
 do ##class(SYS.Container).SetMonitorStateOK("irisowner")
 halt

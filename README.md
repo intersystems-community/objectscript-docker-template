@@ -47,15 +47,18 @@ The script in Installer.cls will import everything you place under /src/cls into
 
 # Dockerfile
 
-The simplest dockerfile to start IRIS and load ObjectScript from /src/cls folder
+The simplest dockerfile which starts IRIS and imports Installer.cls and then runs the Installer.setup method, which creates IRISAPP Namespace and imports ObjectScript code from /src folder into it.
 Use the related docker-compose.yml to easily setup additional parametes like port number and where you map keys and host folders.
+Use .env/ file to adjust the dockerfile being used in docker-compose.
 
 # Dockerfile-zpm
 
-Dockerfile-zpm builds for you a container which contains ZPM package manager client so you are able to install packages from ZPM in this container
+Dockerfile-zpm builds for you a container which contains ZPM package manager client so you are able to install packages from ZPM in this container.
+As an example of usage in installs webterminal
 
-# Dockerfile-zpm-webterminal
-Dockerfile-zpm-webterminal helps to have a container with ZPM and some preloaded ZPM packages, like webterminal
+# Dockerfile-web
+
+Dockerfile-web starts IRIS does the same what Dockerfile does and also sets up the web app programmatically
 
 
 # .vscode/settings.json

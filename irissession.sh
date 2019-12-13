@@ -8,7 +8,6 @@ $@
 if '\$Get(sc) do ##class(%SYSTEM.Process).Terminate(, 1)
 zn "%SYS"
 do ##class(SYS.Container).QuiesceForBundling()
-do ##class(SYS.Container).SetMonitorStateOK("irisowner")
 Do ##class(Security.Users).UnExpireUserPasswords("*")
 halt
 EOF

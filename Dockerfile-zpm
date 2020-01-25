@@ -12,9 +12,7 @@ RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
 USER irisowner
 
 RUN mkdir -p /tmp/deps \
-
  && cd /tmp/deps \
-
  && wget -q https://pm.community.intersystems.com/packages/zpm/latest/installer -O zpm.xml
 
 

@@ -3,10 +3,16 @@
     
         "Dockerfile*": "dockerfile",
       },
+    "objectscript.conn" :{
+      "ns": "IRISAPP",
+      "active": true,
+      "docker-compose": {
+        "service": "iris",
+        "internalPort": 52773
+      }
+    },
     "objectscript.conn.active": true,
-    "objectscript.conn.version": 3,
-    "objectscript.conn.ns": "IRISAPP",
-    "objectscript.conn.port": 52774, 
-    "objectscript.export.addCategory": true
+    
+  
 
 }

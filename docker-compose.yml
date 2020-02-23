@@ -3,7 +3,7 @@ services:
   iris:
     build: 
       context: .
-      dockerfile: Dockerfile-zpm
+      dockerfile: Dockerfile
     restart: always
     ports: 
       - 51773

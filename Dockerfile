@@ -15,7 +15,7 @@ RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisapp
 COPY irissession.sh /
 RUN chmod +x /irissession.sh 
 
-USER irisowner
+USER ${ISC_PACKAGE_MGRUSER}
 
 COPY  Installer.cls .
 COPY  src src

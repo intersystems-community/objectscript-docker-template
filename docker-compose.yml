@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports: 
-      - 51773
+      - 1972
       - 52773
       - 53773
     volumes:

@@ -6,13 +6,27 @@
       },
     "objectscript.conn" :{
       "ns": "IRISAPP",
-      "active": true,
       "username":"_SYSTEM",
       "password": "SYS",
       "docker-compose": {
         "service": "iris",
         "internalPort": 52773
       }
-    }
+    },
+    "sqltools.connections": [
+      {
+        "namespace": "IRISAPP",
+        "connectionMethod": "Server and Port",
+        "showSystem": false,
+        "previewLimit": 50,
+        "server": "localhost",
+        "port": 32770,
+        "askForPassword": false,
+        "driver": "InterSystems IRIS",
+        "name": "objectscript-docker",
+        "username": "_SYSTEM",
+        "password": "SYS"
+      }
+    ]
 
 }

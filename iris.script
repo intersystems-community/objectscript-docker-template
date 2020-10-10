@@ -2,6 +2,9 @@
 do $SYSTEM.OBJ.Load("/opt/irisapp/Installer.cls", "ck")
 set sc = ##class(App.Installer).setup() 
 
+zn "IRISAPP"
+do $System.OBJ.LoadDir("/opt/irisapp/src","ck",,1)
+
 zn "%SYS"
 Do ##class(Security.Users).UnExpireUserPasswords("*")
 

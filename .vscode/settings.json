@@ -6,12 +6,13 @@
       },
     "objectscript.conn" :{
       "ns": "IRISAPP",
-      "username":"_SYSTEM",
+      "username": "_SYSTEM",
       "password": "SYS",
       "docker-compose": {
         "service": "iris",
         "internalPort": 52773
-      }
+      },
+      "active": false
     },
     "sqltools.connections": [
       {

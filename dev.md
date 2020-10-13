@@ -35,3 +35,18 @@ repo -n registry -r -url https://test.pm.community.intersystems.com/registry/ -u
 ```
 repo -r -n registry -url https://pm.community.intersystems.com/
 ```
+
+## create a web app in dockerfile
+```
+zn "%SYS" \
+  write "Create web application ...",! \
+  set webName = "/csp/irisweb" \
+  set webProperties("NameSpace") = "IRISAPP" \
+  set webProperties("Enabled") = 1 \
+  set webProperties("CSPZENEnabled") = 1 \
+  set webProperties("AutheEnabled") = 32 \
+  set webProperties("iKnowEnabled") = 1 \
+  set webProperties("DeepSeeEnabled") = 1 \
+  set sc = ##class(Security.Applications).Create(webName, .webProperties) \
+  write "Web application "_webName_" has been created!",! 
+```

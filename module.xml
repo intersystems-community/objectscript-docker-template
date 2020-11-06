@@ -6,7 +6,7 @@
       <Version>0.0.1</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-      <Resource Name="PackageSample.PKG"/>
+      <Resource Name="dc.PackageSample.PKG"/>
     </Module>
   </Document>
 </Export>

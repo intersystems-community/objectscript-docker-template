@@ -1,4 +1,4 @@
-Class PackageSample.ObjectScript
+Class dc.PackageSample.ObjectScript
 {
 
 ClassMethod Test() As %Status

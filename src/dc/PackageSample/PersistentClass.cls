@@ -1,4 +1,4 @@
-Class PackageSample.PersistentClass Extends %Persistent
+Class dc.PackageSample.PersistentClass Extends %Persistent
 {
 
 Property Test As %VarString;
@@ -20,11 +20,11 @@ Storage Default
 <Value>Test</Value>
 </Value>
 </Data>
-<DataLocation>^PackageSample.PersistentClassD</DataLocation>
+<DataLocation>^dc.Package4C8F.PersistentC1A93D</DataLocation>
 <DefaultData>PersistentClassDefaultData</DefaultData>
-<IdLocation>^PackageSample.PersistentClassD</IdLocation>
-<IndexLocation>^PackageSample.PersistentClassI</IndexLocation>
-<StreamLocation>^PackageSample.PersistentClassS</StreamLocation>
+<IdLocation>^dc.Package4C8F.PersistentC1A93D</IdLocation>
+<IndexLocation>^dc.Package4C8F.PersistentC1A93I</IndexLocation>
+<StreamLocation>^dc.Package4C8F.PersistentC1A93S</StreamLocation>
 <Type>%Storage.Persistent</Type>
 }
 

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="objectscript-sample.ZPM">
+  <Document name="objectscript-template.ZPM">
     <Module>
-      <Name>objectscript-sample</Name>
-      <Version>1.1.0</Version>
+      <Name>objectscript-template</Name>
+      <Version>1.1.1/Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.PackageSample.PKG"/>

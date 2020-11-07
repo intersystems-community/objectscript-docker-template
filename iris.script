@@ -8,5 +8,5 @@ Do ##class(Security.Users).UnExpireUserPasswords("*")
 zn "USER"
 
 ; call your initial methods here
-zpm "load /irisdev/app/ -v":1:1
+zpm "load /opt/irisapp/ -v":1:1
 halt

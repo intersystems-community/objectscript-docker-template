@@ -3,7 +3,7 @@
   <Document name="objectscript-template.ZPM">
     <Module>
       <Name>objectscript-template</Name>
-      <Version>1.1.1/Version>
+      <Version>1.1.2</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.PackageSample.PKG"/>

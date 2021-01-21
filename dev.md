@@ -36,6 +36,11 @@ repo -n registry -r -url https://test.pm.community.intersystems.com/registry/ -u
 repo -r -n registry -url https://pm.community.intersystems.com/
 ```
 
+## export a global in runtime into the repo
+```
+d $System.OBJ.Export("GlobalD.GBL","/irisrun/repo/src/gbl/GlobalD.xml")
+```
+
 ## create a web app in dockerfile
 ```
 zn "%SYS" \

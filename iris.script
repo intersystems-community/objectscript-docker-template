@@ -4,5 +4,11 @@ zn "%SYS"
 Do ##class(Security.Users).UnExpireUserPasswords("*")
 
 zn "USER"
-zpm "load /opt/irisbuild/ -v":1:1
+;; zpm "load /opt/irisbuild/ -v":1:1
+;; removed immediate halt after zpm
+zpm "load /opt/irisbuild/ -v":1
+;;
+;; allow project related init code during image build
+;;
+write "init done",!
 halt

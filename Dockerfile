@@ -6,15 +6,14 @@ USER root
 ## add git
 RUN apt update && apt-get -y install git
         
-WORKDIR /opt/irisbuild
-RUN chown ${ISC_PACKAGE_MGRUSER}:${ISC_PACKAGE_IRISGROUP} /opt/irisbuild
 USER ${ISC_PACKAGE_MGRUSER}
 
-#COPY  Installer.cls .
-COPY  src src
-COPY module.xml module.xml
-COPY iris.script iris.script
+ARG TESTS=0
+ARG MODULE="objectscript-template"
+ARG NAMESPACE="USER"
 
-RUN iris start IRIS \
-	&& iris session IRIS < iris.script \
-    && iris stop IRIS quietly
+RUN --mount=type=bind,src=.,dst=. \
+    iris start IRIS && \
+	iris session IRIS < iris.script && \
+    ([ $TESTS -eq 0 ] || iris session iris -U $NAMESPACE "##class(%ZPM.PackageManager).Shell(\"test $MODULE -v -only\",1,1)") && \
+    iris stop IRIS quietly

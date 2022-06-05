@@ -5,6 +5,10 @@ use it when docker says "There is no space left on device". It will remove built
 docker system prune -f
 ```
 
+```
+docker rm -f $(docker ps -qa)
+```
+
 ## build container with no cache
 ```
 docker-compose build --no-cache

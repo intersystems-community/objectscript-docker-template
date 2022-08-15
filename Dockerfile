@@ -2,11 +2,7 @@ ARG IMAGE=intersystemsdc/irishealth-community
 ARG IMAGE=intersystemsdc/iris-community
 FROM $IMAGE
 
-USER root   
-## add git
-RUN apt update && apt-get -y install git
-        
-USER ${ISC_PACKAGE_MGRUSER}
+WORKDIR /home/irisowner/irisbuild
 
 ARG TESTS=0
 ARG MODULE="objectscript-template"

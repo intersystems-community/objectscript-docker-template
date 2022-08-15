@@ -1,13 +1,26 @@
-Class dc.PackageSample.PersistentClass Extends %Persistent
+Class dc.sample.PersistentClass Extends %Persistent
 {
 
 Property Test As %VarString;
 
-ClassMethod CreateRecord() As %Status
+ClassMethod CreateRecord(ByRef id As %Integer) As %Status
 {
-    s objPC=..%New()
-    s objPC.Test="Test string"
-    return objPC.%Save()
+    set sc=$$$OK
+    set objPC=..%New()
+    set objPC.Test="Test string"
+    set sc=objPC.%Save()
+    set id=objPC.%Id()
+    return sc
+}
+
+/// opens the record by id and reads its property
+ClassMethod ReadProperty(id As %Integer) As %Status
+{
+    Set sc = $$$OK
+    #dim obj as dc.sample.PersistentClass
+    set obj=..%OpenId(id,,.sc)
+    if $ISOBJECT(obj) write obj.Test
+    Return sc
 }
 
 Storage Default

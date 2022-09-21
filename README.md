@@ -1,6 +1,6 @@
 ## intersystems-objectscript-template
 This is a template for InterSystems ObjectScript Github repository.
-The template goes also with a few files which let you immedietly compile your ObjecScript files in InterSystems IRIS Community Edition in a docker container
+The template goes also with a few files which let you immediately compile your ObjectScript files in InterSystems IRIS Community Edition in a docker container
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
@@ -50,15 +50,15 @@ The script in Installer.cls will import everything you place under /src into IRI
 
 ### Dockerfile
 
-The simplest dockerfile which starts IRIS and imports code from /src folder into it.
+The simplest Dockerfile which starts IRIS and imports code from /src folder into it.
 Use the related docker-compose.yml to easily setup additional parametes like port number and where you map keys and host folders.
 
 
 ### .vscode/settings.json
 
-Settings file to let you immedietly code in VSCode with [VSCode ObjectScript plugin](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript))
+Settings file to let you immediately code in VSCode with [VSCode ObjectScript plugin](https://marketplace.visualstudio.com/items?itemName=daimor.vscode-objectscript))
 
 ### .vscode/launch.json
 Config file if you want to debug with VSCode ObjectScript
 
-[Read about all the files in this artilce](https://community.intersystems.com/post/dockerfile-and-friends-or-how-run-and-collaborate-objectscript-projects-intersystems-iris)
+[Read about all the files in this article](https://community.intersystems.com/post/dockerfile-and-friends-or-how-run-and-collaborate-objectscript-projects-intersystems-iris)

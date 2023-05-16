@@ -10,7 +10,7 @@
 
 	"service": "iris",
 
-	"workspaceFolder": "/irisrun/repo",
+	"workspaceFolder": "/home/irisowner/dev",
 
 	// This provides the elements of the connection object which require different values when connecting to the workspace within the container,
 	// versus those in .vscode/settings.json which apply when operating locally on the workspace files.

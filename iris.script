@@ -1,4 +1,4 @@
-    ;do $System.OBJ.LoadDir("/opt/irisbuild/src","ck",,1)
+    ;do $System.OBJ.LoadDir("/home/irisowner/dev/src","ck",,1)
 
     ;disabling password expire for development purposes
     zn "%SYS"
@@ -10,7 +10,8 @@
     set prop("AutheEnabled")=48
     do ##class(Security.Services).Modify("%Service_CallIn",.prop)
 
+    zpm "install passwordless"
     ; importing the source code of the repository as ZPM module
     zn "USER"
-    zpm "load /home/irisowner/irisbuild/ -v":1:1
+    zpm "load /home/irisowner/dev -v":1:1
     halt

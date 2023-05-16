@@ -2,7 +2,7 @@ ARG IMAGE=intersystemsdc/irishealth-community
 ARG IMAGE=intersystemsdc/iris-community
 FROM $IMAGE
 
-WORKDIR /home/irisowner/irisbuild
+WORKDIR /home/irisowner/dev
 
 ARG TESTS=0
 ARG MODULE="objectscript-template"

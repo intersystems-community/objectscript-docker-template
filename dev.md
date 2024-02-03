@@ -5,6 +5,11 @@ use it when docker says "There is no space left on device". It will remove built
 docker system prune -f
 ```
 
+## if the previous doesn't help anymore:
+```
+docker system prune -a
+```
+
 ```
 docker rm -f $(docker ps -qa)
 ```

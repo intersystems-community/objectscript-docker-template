@@ -101,3 +101,7 @@ USER root
 RUN apt update && apt-get -y install git
 
 USER ${ISC_PACKAGE_MGRUSER}
+
+
+## Python virtual environment
+python -m vevn .venv

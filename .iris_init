@@ -4,3 +4,4 @@
 :alias installipm s r=##class(%Net.HttpRequest).%New(),r.Server="pm.community.intersystems.com",r.SSLConfiguration="ISC.FeatureTracker.SSL.Config" d r.Get("/packages/zpm/latest/installer"),$system.OBJ.LoadStream(r.HttpResponse.Data,"c") ;
 :alias add%all x "n $namespace set $namespace=""%SYS"",P(""Globals"")=""%DEFAULTDB"",sc=##class(Config.Namespaces).Create(""%All"",.P)" ;
 :alias exportglobal d $System.OBJ.Export("$1.GBL","$2$1.xml") ;
+:alias err d $System.Status.DisplayError($1) ;

@@ -9,11 +9,11 @@ ARG MODULE="objectscript-template"
 ARG NAMESPACE="USER"
 
 ## Embedded Python environment
-ENV IRISUSERNAME "_SYSTEM"
-ENV IRISPASSWORD "SYS"
-ENV IRISNAMESPACE "USER"
+ENV IRISUSERNAME="_SYSTEM"
+ENV IRISPASSWORD="SYS"
+ENV IRISNAMESPACE="USER"
 ENV PYTHON_PATH=/usr/irissys/bin/
-ENV PATH "/usr/irissys/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/irisowner/bin"
+ENV PATH="/usr/irissys/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/home/irisowner/bin"
 
 COPY .iris_init /home/irisowner/.iris_init
 

@@ -52,9 +52,9 @@ sudo chmod +x /usr/local/bin/docker-compose
 repo -n registry -r -url https://test.pm.community.intersystems.com/registry/ -user test -pass PassWord42
 ```
 
-## get back to public zpm registry
+## switch back to a public zpm registry
 ```
-repo -r -n registry -url https://pm.community.intersystems.com/
+repo -r -n registry -url https://pm.community.intersystems.com/ -user "" -pass ""
 ```
 
 ## export a global in runtime into the repo

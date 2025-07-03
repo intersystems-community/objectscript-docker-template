@@ -4,6 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     restart: always
+    environment:
+      - ISC_CPF_MERGE_FILE=/home/irisowner/dev/merge.cpf
     ports:
       - 1972
       - 52773
